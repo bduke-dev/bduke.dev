@@ -1,0 +1,13 @@
+.wrapper {
+  min-height: 100%;
+  position: relative;
+}
+
+.content {
+  padding-bottom: 8em;
+  /* Height of the footer element */
+}
+
+.nav-spacer {
+  height: calc(64px + 2em);
+}

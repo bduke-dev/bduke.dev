@@ -1,0 +1,98 @@
+@import "../../../scss/_helpers/variables";
+
+#sliderPage {
+  width: 100%;
+}
+
+#cssSlider table {
+  width: 100%;
+  text-align: center;
+  table-layout: fixed;
+}
+
+#cssSlider p {
+  display: inline;
+  vertical-align: middle;
+}
+
+#cssSlider img {
+  width: 3em;
+  vertical-align: middle;
+}
+
+#cssSlider table tr td {
+  vertical-align: text-top;
+}
+
+.innerBlock {
+  background-color: $mainAccent;
+  border-radius: 3px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+  /*WIDE SCREEN*/
+  @media only screen and (min-width: 1001px) {
+    height: 100%;
+  }
+}
+
+.blocks {
+  /*WIDE SCREEN*/
+  @media only screen and (min-width: 1001px) {
+    height: 1px;
+    /*fix height issue on firefox*/
+    @-moz-document url-prefix() {
+      height: initial;
+    }
+  }
+  padding: 0 0.5em;
+  /*NARROW SCREEN*/
+  @media only screen and (max-width: 1000px) {
+    padding: 0.5em 0;
+  }
+}
+
+.blocks a {
+  text-decoration: none;
+  /*WIDE SCREEN*/
+  @media only screen and (min-width: 1001px) {
+    display: inline-table;
+    height: 100%;
+  }
+}
+
+.innerBlock:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+/*WIDE SCREEN*/
+
+@media only screen and (min-width: 1001px) {
+  .blocks {
+    width: calc(33.3333333333333333333% - 1em);
+  }
+}
+
+/*NARROW SCREEN*/
+
+@media only screen and (max-width: 1000px) {
+  #cssSlider table tr td {
+    display: block;
+  }
+}
+
+/*back to previoud page*/
+
+.sliderBack {
+  position: absolute;
+  left: 1em !important;
+  top: 5em;
+  width: 3em;
+  height: 3em;
+  background-color: $mainColor;
+  z-index: 9;
+}
+
+.sliderBack img {
+  width: 100%;
+}

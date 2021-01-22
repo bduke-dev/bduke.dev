@@ -1,0 +1,136 @@
+@import "../../../scss/_helpers/variables";
+
+/*page sizing*/
+
+#home * {
+  margin: 0;
+  padding: 0;
+}
+
+#home {
+  width: 100%;
+}
+
+/*intro size and background image*/
+
+#home #intro-wrapper {
+  width: 100%;
+  height: 100vh;
+  min-height: 568px;
+  background-image: url(../../../../assets/background.png);
+  /*SCREEN SIZE: WIDE*/
+  @media only screen and (min-width: 750px) {
+    background-attachment: fixed;
+  }
+  /*SCREEN SIZE: NARROW */
+  @media only screen and (max-width: 749px) {
+    background-attachment: scroll;
+  }
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#home #intro {
+  position: relative;
+  width: 16em;
+  height: 21.3em;
+  margin: 0 auto;
+}
+
+/*intro text*/
+
+#home #intro p {
+  font-weight: bold;
+  //text-align: center;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.14);
+  height: 2.6em;
+}
+
+/*portrait styling and positioning*/
+
+#home #portrait {
+  box-sizing: border-box;
+  width: 16em;
+  height: 16em;
+  border-radius: 100em;
+  border: 6px solid $mainColor;
+  margin: 0 auto;
+  background-image: url(../../../../assets/portrait.JPG);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+
+#home #portrait:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+/*about link that shows under portrait on hover*/
+
+#home #aboutLink {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: -2em;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background-color: $mainColor;
+  color: white;
+  transition: all 0.2s ease-in-out;
+  font-size: 1.3em;
+  padding: 0.2em;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+#home #intro a:hover ~ #aboutLink {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*bio and code sizing*/
+
+#home #bio {
+  min-height: calc(50vh - 4em);
+  width: 80%;
+  margin: 0 auto;
+}
+
+#home #code {
+  min-height: calc(50vh - 4em);
+  width: 100%;
+  background-image: url(../../../../assets/codeBackground.png);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#home #code,
+#home #bio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*bio and code text*/
+
+#home #bio p,
+#home #code p {
+  margin: 1em 0;
+}
+
+#home #code p {
+  color: white;
+  text-align: center;
+}
