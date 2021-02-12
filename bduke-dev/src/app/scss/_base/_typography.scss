@@ -1,18 +1,48 @@
 /*FONT IMPORT*/
 
 @font-face {
-  font-family: TimeBurnernor;
-  src: url(../../../assets/timeburnernormal.ttf);
+  font-family: TitilliumWeb-Black;
+  src: url(../../../assets/font/Titillium_Web/TitilliumWeb-Black.ttf);
 }
 
+@font-face {
+  font-family: TitilliumWeb-Regular;
+  src: url(../../../assets/font/Titillium_Web/TitilliumWeb-Regular.ttf);
+}
+
+@font-face {
+  font-family: OpenSans-Regular;
+  src: url(../../../assets/font/Open_Sans/OpenSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: OpenSans-Light;
+  src: url(../../../assets/font/Open_Sans/OpenSans-Light.ttf);
+}
 /*FONT*/
 
 * {
-  font-family: "TimeBurnernor";
   color: $fontColor;
 }
 
 /*TEXT*/
+
+main {
+  font-family: "OpenSans-Light";
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "TitilliumWeb-Regular";
+  }
+}
+
+footer {
+  font-family: "OpenSans-Light";
+}
 
 main h1 {
   font-size: 2.6em;

@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, HostListener, OnInit } from '@angular/core';
+import { GeneralService } from 'src/app/services/general.service';
 
 @Component({
   selector: 'app-nav',
@@ -10,9 +11,11 @@ export class NavComponent implements OnInit, AfterViewInit {
   checked = true;
   private scrollPosition = 0;
   private resizeTimer: any;
-  constructor() { }
+
+  constructor(private gs: GeneralService) { }
 
   ngOnInit(): void {
+    this.checked = this.gs.screenSize() === 'lg';
   }
 
   ngAfterViewInit(): void {
@@ -21,19 +24,19 @@ export class NavComponent implements OnInit, AfterViewInit {
 
   @HostListener('window:scroll', ['$event']) // for window scroll events
   onScroll(event: Event) {
-    console.log('scroll pos: ' + this.scrollPosition);
+    //console.log('scroll pos: ' + this.scrollPosition);
     if (!this.scrollPosition.toString()) {
       // wasn't set yet
       this.scrollPosition = 0;
     }
-    console.log('scroll y: ' + window.scrollY);
+    //console.log('scroll y: ' + window.scrollY);
     const up = window.scrollY - this.scrollPosition < 0;
-    console.log('up ? ' + up);
+    //console.log('up ? ' + up);
     this.scrollPosition = window.scrollY;
 
     const delta = up ? 1 : -1;
-    console.log('delta : ' + delta);
-    console.log('--end--');
+    //console.log('delta : ' + delta);
+    //console.log('--end--');
 
     if (window.innerWidth > 768) {
       if (window.scrollY < 40) {

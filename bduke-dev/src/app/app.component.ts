@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRouteSnapshot, NavigationEnd, Router } from '@angular/router';
+import { environment } from '../environments/environment';
+
+// declare gtag as a function to set and sent the events
+declare let gtag: Function;
 
 @Component({
   selector: 'app-root',
@@ -11,6 +15,13 @@ export class AppComponent implements OnInit {
   title = '';
 
   constructor(private router: Router) {
+    this.router.events.subscribe(event => {
+
+      if (environment.production && event instanceof NavigationEnd) {
+        gtag('config', 'UA-89022005-1', { 'page_path': event.urlAfterRedirects });
+      }
+
+    });
   }
 
   ngOnInit() {
@@ -18,7 +29,7 @@ export class AppComponent implements OnInit {
       if (event instanceof NavigationEnd) {
         console.log(event);
         this.title = event.url;
-        console.log(this.title);
+        //console.log(this.title);
       }
     });
   }

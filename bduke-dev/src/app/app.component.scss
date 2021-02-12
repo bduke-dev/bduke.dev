@@ -11,3 +11,9 @@
 .nav-spacer {
   height: calc(64px + 2em);
 }
+
+@media only screen and (max-width: 749px) {
+  .content {
+    padding-bottom: 10em !important;
+  }
+}

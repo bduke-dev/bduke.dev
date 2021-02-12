@@ -17,6 +17,7 @@ a {
 
 .menu {
   transition: width 0.25s, 0.25s background 0.25s;
+  font-family: "TitilliumWeb-Regular";
 }
 
 #menu-trigger {
@@ -170,12 +171,12 @@ a {
     height: auto;
   }
   .menu-link {
-    padding: 10px 0;
+    padding: 5px 0;
     font-size: 1.8em;
   }
 
   #menu-trigger:checked ~ .menu {
-    height: 230px;
+    height: 216px;
   }
 
   .menu {
