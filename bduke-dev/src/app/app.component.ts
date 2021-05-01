@@ -22,6 +22,12 @@ export class AppComponent implements OnInit {
       }
 
     });
+
+    let path = localStorage.getItem('path-bd');
+    if (path) {
+      localStorage.removeItem('path-bd');
+      this.router.navigate([path]);
+    }
   }
 
   ngOnInit() {
