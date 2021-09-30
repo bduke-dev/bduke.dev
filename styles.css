@@ -1,0 +1,134 @@
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[5].rules[0].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[5].rules[0].oneOf[1].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[5].rules[1].use[0]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[5].rules[1].use[1]!./src/styles.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/* You can add global styles to this file, and also import other style files */
+/*CSS RESET*/
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  height: 100%;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  background-color: #f8f8f8;
+}
+* {
+  box-sizing: border-box;
+}
+/*FONT IMPORT*/
+@font-face {
+  font-family: TitilliumWeb-Black;
+  src: url('TitilliumWeb-Black.ttf');
+}
+@font-face {
+  font-family: TitilliumWeb-Regular;
+  src: url('TitilliumWeb-Regular.ttf');
+}
+@font-face {
+  font-family: OpenSans-Regular;
+  src: url('OpenSans-Regular.ttf');
+}
+@font-face {
+  font-family: OpenSans-Light;
+  src: url('OpenSans-Light.ttf');
+}
+/*FONT*/
+* {
+  color: #2f2f2f;
+}
+/*TEXT*/
+main {
+  font-family: "OpenSans-Light";
+}
+main h1,
+main h2,
+main h3,
+main h4,
+main h5,
+main h6 {
+  font-family: "TitilliumWeb-Regular";
+}
+footer {
+  font-family: "OpenSans-Light";
+}
+main h1 {
+  font-size: 2.6em;
+}
+main h2 {
+  font-size: 2.4em;
+}
+main h3 {
+  font-size: 2.2em;
+}
+main h4 {
+  font-size: 2em;
+}
+main h5 {
+  font-size: 1.9em;
+}
+main p {
+  font-size: 1.8em;
+}
+a {
+  transition: 0.3s ease-in-out;
+}
+main a:hover {
+  color: #0065c4;
+}
+/*fixes padding issue;
+puts the page at the top of the screen*/
+.subPage p:first-child {
+  margin: 0;
+  padding: 0;
+}
+.inline {
+  display: inline;
+}
+/*SCREEN SIZE: WIDE  || SUB-PAGES*/
+@media only screen and (min-width: 750px) {
+  .subPage {
+    width: 70%;
+    padding-bottom: 1em;
+    display: block;
+  }
+}
+/*SCREEN SIZE: NARROW */
+@media only screen and (max-width: 749px) {
+  main {
+    width: 90%;
+  }
+
+  .subPage {
+    padding-bottom: 1em;
+    display: block;
+  }
+}
+main {
+  margin-left: auto;
+  margin-right: auto;
+}
+.box {
+  width: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.2s ease-in-out;
+  background-color: white;
+  margin: 1em auto;
+  padding: 1em;
+  box-sizing: border-box;
+}
+.box:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+.box .title {
+  text-align: center;
+}
+.box .line {
+  border-bottom: 3px solid #0065c4;
+}
+.box:first-child {
+  margin-top: 0;
+}
+
+/*# sourceMappingURL=styles.css.map*/
