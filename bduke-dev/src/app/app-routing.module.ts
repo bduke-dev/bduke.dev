@@ -3,14 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/webpages/home/home.component';
 import { AboutComponent } from './components/webpages/about/about.component';
 import { ContactComponent } from './components/webpages/contact/contact.component';
-import { CssSliderComponent } from './components/webpages/css-slider/css-slider.component';
 import { WorkComponent } from './components/webpages/work/work.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'css-slider', component: CssSliderComponent },
   { path: 'work', component: WorkComponent }
 ];
 

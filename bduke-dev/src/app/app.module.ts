@@ -9,7 +9,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { AboutComponent } from './components/webpages/about/about.component';
 import { WorkComponent } from './components/webpages/work/work.component';
-import { CssSliderComponent } from './components/webpages/css-slider/css-slider.component';
 import { ContactComponent } from './components/webpages/contact/contact.component';
 
 @NgModule({
@@ -20,7 +19,6 @@ import { ContactComponent } from './components/webpages/contact/contact.componen
     FooterComponent,
     AboutComponent,
     WorkComponent,
-    CssSliderComponent,
     ContactComponent
   ],
   imports: [
