@@ -1,0 +1,22 @@
+<input id="menu-trigger" type=checkbox [(ngModel)]="checked" />
+
+<nav class="menu-opener">
+  <label for="menu-trigger">
+    <div class="menu-opener-inner"></div>
+  </label>
+  <a routerLink="" id="home"><img id="logo" src="../../../assets/BD.svg" /></a>
+</nav>
+
+<nav class="menu">
+  <ul class="menu-inner">
+    <a routerLink="about" routerLinkActive="active-link" class="menu-link">
+      <li>About</li>
+    </a>
+    <a routerLink="work" routerLinkActive="active-link" class="menu-link">
+      <li>Work</li>
+    </a>
+    <a routerLink="contact" routerLinkActive="active-link" class="menu-link">
+      <li>Contact</li>
+    </a>
+  </ul>
+</nav>
