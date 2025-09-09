@@ -2,9 +2,10 @@ import { AfterViewInit, Component, HostListener, OnInit } from '@angular/core';
 import { GeneralService } from 'src/app/services/general.service';
 
 @Component({
-  selector: 'app-nav',
-  templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.scss']
+    selector: 'app-nav',
+    templateUrl: './nav.component.html',
+    styleUrls: ['./nav.component.scss'],
+    standalone: false
 })
 export class NavComponent implements OnInit, AfterViewInit {
 
