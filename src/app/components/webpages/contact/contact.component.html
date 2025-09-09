@@ -1,5 +1,50 @@
 <main id="contact" class="subPage">
   <div class="box">
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+      <!-- Name -->
+      <div class="field">
+        <input type="text" formControlName="name" placeholder="Your name"
+          [class.invalid]="getControl('name')?.invalid && getControl('name')?.touched" required />
+        @if (getControl('name')?.errors?.['required'] && getControl('name')?.touched) {<div class="error">
+          Name is required.
+        </div>}
 
+      </div>
+
+      <!-- Email -->
+      <div class="field">
+        <input type="email" formControlName="email" placeholder="Your e‑mail address"
+          [class.invalid]="getControl('email')?.invalid && getControl('email')?.touched" required />
+        @if (getControl('email')?.errors?.['required'] && getControl('email')?.touched) {<div class="error">
+          E‑mail is required.
+        </div>}
+
+        @if (getControl('email')?.errors?.['email'] && getControl('email')?.touched) {
+        <div class="error" *ngIf="">
+          Please enter a valid e‑mail address.
+        </div>
+        }
+
+      </div>
+
+      <!-- Message -->
+      <div class="field">
+        <textarea formControlName="message" rows="6" placeholder="Your message…"
+          [class.invalid]="getControl('message')?.invalid && getControl('message')?.touched" required></textarea>
+        @if (getControl('message')?.errors?.['required'] && getControl('message')?.touched) {
+        <div class="error">
+          Message is required.
+        </div>
+        }
+
+      </div>
+
+      <button type="submit" [disabled]="contactForm.invalid">Send via e‑mail</button>
+
+      <p class="note">
+        Clicking **Send** opens your default e‑mail client with a pre‑filled
+        message. You must press **Send** in that client to actually deliver the e‑mail.
+      </p>
+    </form>
   </div>
 </main>

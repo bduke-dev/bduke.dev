@@ -1,3 +1,5 @@
+@use "../_helpers/variables";
+
 /*FONT IMPORT*/
 
 @font-face {
@@ -22,7 +24,7 @@
 /*FONT*/
 
 * {
-  color: $fontColor;
+  color: variables.$fontColor;
 }
 
 /*TEXT*/
@@ -76,7 +78,7 @@ a {
 }
 
 main a:hover {
-  color: $hoverColor;
+  color: variables.$hoverColor;
 }
 
 /*fixes padding issue;

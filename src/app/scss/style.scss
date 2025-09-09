@@ -1,7 +1,7 @@
-@import "_helpers/_variables";
-@import "./_base/reset";
-@import "./_base/typography";
-@import "./_layout/layout";
-@import "./_layout/screenSize";
+@use "_helpers/_variables";
+@use "./_base/reset";
+@use "./_base/typography";
+@use "./_layout/layout";
+@use "./_layout/screenSize";
 
-@import "./_components/box";
+@use "./_components/box";
