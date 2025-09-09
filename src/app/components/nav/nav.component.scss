@@ -1,4 +1,4 @@
-@import "../../scss/_helpers/variables";
+@use "../../scss/_helpers/variables";
 
 a {
   display: block;
@@ -41,7 +41,7 @@ a {
 }
 
 .menu-opener {
-  background: $nav_color;
+  background: variables.$nav_color;
 }
 
 .menu-opener label {
@@ -119,7 +119,7 @@ a {
 }
 
 #menu-trigger:checked ~ .menu {
-  background: $nav_color;
+  background: variables.$nav_color;
   width: -webkit-calc(100% - 2em);
   width: calc(100% - 2em);
 }

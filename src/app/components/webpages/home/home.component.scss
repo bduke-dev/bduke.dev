@@ -1,4 +1,4 @@
-@import "../../../scss/_helpers/variables";
+@use "../../../scss/_helpers/variables";
 
 /*page sizing*/
 
@@ -18,14 +18,7 @@
   height: 100vh;
   min-height: 568px;
   background-image: url(../../../../assets/background.png);
-  /*SCREEN SIZE: WIDE*/
-  @media only screen and (min-width: 750px) {
-    background-attachment: fixed;
-  }
-  /*SCREEN SIZE: NARROW */
-  @media only screen and (max-width: 749px) {
-    background-attachment: scroll;
-  }
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -34,6 +27,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  /*SCREEN SIZE: WIDE*/
+  @media only screen and (min-width: 750px) {
+    background-attachment: fixed;
+  }
+  /*SCREEN SIZE: NARROW */
+  @media only screen and (max-width: 749px) {
+    background-attachment: scroll;
+  }
 }
 
 #home #intro {
@@ -59,7 +61,7 @@
   width: 16em;
   height: 16em;
   border-radius: 100em;
-  border: 6px solid $mainColor;
+  border: 6px solid variables.$mainColor;
   margin: 0 auto;
   background-image: url(../../../../assets/portrait.JPG);
   background-size: cover;
@@ -85,7 +87,7 @@
   left: 0;
   right: 0;
   text-align: center;
-  background-color: $mainColor;
+  background-color: variables.$mainColor;
   color: white;
   transition: all 0.2s ease-in-out;
   font-size: 1.3em;
