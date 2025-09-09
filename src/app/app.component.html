@@ -1,6 +1,8 @@
 <app-nav></app-nav>
 <div class="wrapper">
-  <div *ngIf="title !== '/'" class="nav-spacer"></div>
+  @if (title !== '/') {
+    <div class="nav-spacer"></div>
+  }
   <div class="content">
     <router-outlet></router-outlet>
   </div>
