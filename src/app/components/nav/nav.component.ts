@@ -1,11 +1,13 @@
 import { AfterViewInit, Component, HostListener, OnInit } from '@angular/core';
-import { GeneralService } from 'src/app/services/general.service';
+import { GeneralService } from '../../services/general.service';
+import { FormsModule } from '@angular/forms';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
-    selector: 'app-nav',
-    templateUrl: './nav.component.html',
-    styleUrls: ['./nav.component.scss'],
-    standalone: false
+  selector: 'app-nav',
+  templateUrl: './nav.component.html',
+  styleUrls: ['./nav.component.scss'],
+  imports: [FormsModule, RouterLink, RouterLinkActive]
 })
 export class NavComponent implements OnInit, AfterViewInit {
 

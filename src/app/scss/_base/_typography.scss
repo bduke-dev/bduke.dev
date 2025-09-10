@@ -2,24 +2,86 @@
 
 /*FONT IMPORT*/
 
-@font-face {
-  font-family: TitilliumWeb-Black;
-  src: url(../../../assets/font/Titillium_Web/TitilliumWeb-Black.ttf);
+.titillium-web-extralight {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 200;
+  font-style: normal;
 }
 
-@font-face {
-  font-family: TitilliumWeb-Regular;
-  src: url(../../../assets/font/Titillium_Web/TitilliumWeb-Regular.ttf);
+.titillium-web-light {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
-@font-face {
-  font-family: OpenSans-Regular;
-  src: url(../../../assets/font/Open_Sans/OpenSans-Regular.ttf);
+.titillium-web-regular {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-@font-face {
-  font-family: OpenSans-Light;
-  src: url(../../../assets/font/Open_Sans/OpenSans-Light.ttf);
+.titillium-web-semibold {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.titillium-web-bold {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.titillium-web-black {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.titillium-web-extralight-italic {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.titillium-web-light-italic {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.titillium-web-regular-italic {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.titillium-web-semibold-italic {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.titillium-web-bold-italic {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.open-sans-light {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.open-sans-regular {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
 }
 /*FONT*/
 
@@ -30,7 +92,7 @@
 /*TEXT*/
 
 main {
-  font-family: "OpenSans-Light";
+  @extend .open-sans-light;
 
   h1,
   h2,
@@ -38,12 +100,12 @@ main {
   h4,
   h5,
   h6 {
-    font-family: "TitilliumWeb-Regular";
+    @extend .titillium-web-regular;
   }
 }
 
 footer {
-  font-family: "OpenSans-Light";
+  @extend .open-sans-light;
 }
 
 main h1 {

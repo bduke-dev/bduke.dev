@@ -1,4 +1,5 @@
 @use "../../scss/_helpers/variables";
+@use "../../scss/_base/typography";
 
 a {
   display: block;
@@ -17,7 +18,6 @@ a {
 
 .menu {
   transition: width 0.25s, 0.25s background 0.25s;
-  font-family: "TitilliumWeb-Regular";
 }
 
 #menu-trigger {
@@ -156,10 +156,10 @@ a {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   font-size: 2rem;
-  font-weight: 100;
   height: 100%;
   text-align: center;
   text-decoration: none;
+  @extend .titillium-web-light;
 }
 .menu-link li {
   margin: auto;

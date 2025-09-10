@@ -1,19 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRouteSnapshot, NavigationEnd, Router } from '@angular/router';
+import { Component } from '@angular/core';
+import { ActivatedRouteSnapshot, NavigationEnd, Router, RouterOutlet } from '@angular/router';
+import { NavComponent } from './components/nav/nav.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { environment } from '../environments/environment';
 
 // declare gtag as a function to set and sent the events
 declare let gtag: Function;
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss'],
-    standalone: false
+  selector: 'app-root',
+  imports: [RouterOutlet, NavComponent, FooterComponent],
+  templateUrl: './app.html',
+  styleUrl: './app.scss'
 })
-export class AppComponent implements OnInit {
-
-  title = '';
+export class App {
+  protected title = '';
 
   constructor(private router: Router) {
     this.router.events.subscribe(event => {

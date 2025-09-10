@@ -1,4 +1,5 @@
 @use "../../../scss/_helpers/variables";
+@use "../../../scss/_base/typography";
 
 /*page sizing*/
 
@@ -17,7 +18,7 @@
   width: 100%;
   height: 100vh;
   min-height: 568px;
-  background-image: url(../../../../assets/background.png);
+  background-image: url(/background.png);
 
   background-size: cover;
   background-position: center;
@@ -47,11 +48,10 @@
 /*intro text*/
 
 #home #intro p {
-  font-weight: bold;
-  //text-align: center;
-  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.14);
+  text-shadow: 0 3px 3px rgba(0, 0, 0, 0.24);
   height: 2.6em;
   margin-bottom: 1.6rem;
+  @extend .open-sans-regular;
 }
 
 /*portrait styling and positioning*/
@@ -63,7 +63,7 @@
   border-radius: 100em;
   border: 6px solid variables.$mainColor;
   margin: 0 auto;
-  background-image: url(../../../../assets/portrait.JPG);
+  background-image: url(/portrait.JPG);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -112,7 +112,7 @@
 #home #code {
   min-height: calc(50vh - 4em);
   width: 100%;
-  background-image: url(../../../../assets/codeBackground.png);
+  background-image: url(/codeBackground.png);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
