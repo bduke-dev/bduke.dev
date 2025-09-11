@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRouteSnapshot, NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { NavComponent } from './components/nav/nav.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { environment } from '../environments/environment';
+import { environment } from '../environments/environment.development';
 
 // declare gtag as a function to set and sent the events
 declare let gtag: Function;

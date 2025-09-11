@@ -1,13 +1,12 @@
 <input id="menu-trigger" type=checkbox [(ngModel)]="checked" />
 
-<nav class="menu-opener">
-  <label for="menu-trigger">
-    <div class="menu-opener-inner"></div>
-  </label>
-  <a routerLink="" id="home"><img id="logo" src="/BD.svg" /></a>
-</nav>
-
 <nav class="menu">
+  <div class="menu-opener">
+    <label for="menu-trigger">
+      <div class="menu-opener-inner"></div>
+    </label>
+    <a routerLink="" id="home"><img id="logo" src="/BD.svg" /></a>
+  </div>
   <ul class="menu-inner">
     <a routerLink="about" routerLinkActive="active-link" class="menu-link">
       <li>About</li>
